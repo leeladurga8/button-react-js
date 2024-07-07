@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>button Reactjs</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <div id="mybuton">
+
+      </div>
+      <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/jsx">        
+       
+        function Pr({name,disp}){   
+            return(  
+                <div>       
+                    <h1 class="bl">Primary</h1>                         
+                 <button class="but">Button</button>             
+                </div>   
+            )
+        }       
+        function Sr({name,disp}){         
+            return(  
+                <div>       
+                    <h2 class="ya">Secondary</h2>                         
+                 <button class="bu">Button</button>             
+                </div>   
+            )
+        }  
+        function Dis({name,disp})  {
+            return(
+                <div>
+                    <h2 class="b">Disabled</h2>
+                    <button class="bt">Button</button>
+                </div>
+            )
+        }
+           
+                                    
+        function Secondry(){
+            let butt = ["Primary",];
+            return(
+                <div>
+                   {butt.map((name)=><Pr name={name}/>)}
+                </div>
+            )
+        }
+        
+        const app = document.getElementById('mybuton');
+        const root = ReactDOM.createRoot(app);
+        root.render(<Secondry/>);
+    </script>
+        
+</body>
+</html>
